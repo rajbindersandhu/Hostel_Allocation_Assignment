@@ -1,0 +1,47 @@
+.container{
+    height: 100vh;
+    display :flex;
+    align-items:flex-start;
+    justify-content: center;
+}
+.box{
+    text-align: center;
+    border : 2px solid black;
+    border-radius: 5%;
+    padding: 3%;
+    background-color: blanchedalmond;
+}
+.header{
+    display : grid;
+    margin-top: -60px;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    background-color: darkgoldenrod;
+}
+a{
+    border : 1px solid Black;
+    height:30px;
+    cursor: pointer;
+    align-self: center;
+    white-space: nowrap;
+}
+.name{
+    font-weight: 800;
+    border-bottom: 2px solid black;
+    align-self: center;
+}
+.reminder-box{
+    text-align: center;
+    border : 1px solid black;
+    padding :2%;
+
+}
+.remider-list{
+    list-style-type: none;
+    font-weight: 800;
+}
+.reminder-btn{
+    background-color: lightskyblue;
+    font-weight: 700;
+    cursor: pointer;
+}
