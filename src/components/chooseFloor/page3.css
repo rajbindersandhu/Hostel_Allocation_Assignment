@@ -26,19 +26,14 @@ ul{
 
 .floor-box{
     width:75%;
-    margin-top: 5%;;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    padding: 8%;
-    padding-top: 3%;
     display :grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto ;
     justify-content: space-around;
     row-gap: 10%;
-    border: 1px solid black;
-    
-    height : 50%;
     border-radius: 5%;
 }
 .floor{
