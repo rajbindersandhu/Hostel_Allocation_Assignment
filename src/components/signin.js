@@ -27,15 +27,7 @@ firebase.initializeApp({
     },
   };
   
-  function Header(){
-    return (
-      <div className = "header"> 
-        <h3>Hostel Allocation</h3>
-        <p className="name">{firebase.auth().currentUser.displayName}</p>
-        <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
-    </div>
-    );
-  }
+  
 
   
 
@@ -52,6 +44,7 @@ firebase.initializeApp({
 
     let user_Stored_Data = JSON.parse(localStorage.getItem("user-date"));
 
+    
     function removeHistory(){
       localStorage.removeItem("user-date");
       user_Stored_Data ={};
@@ -76,9 +69,25 @@ firebase.initializeApp({
 
     let [reminderVisible , setReminderVisible] = useState(true);
 
-    useEffect(()=>{
-      JSON.parse(localStorage.getItem("user-date")) ? setReminderVisible(reminderVisible = false) : setReminderVisible(reminderVisible = true) ;
-    },([reminderVisible]));
+    // useEffect(()=>{
+    //   JSON.parse(localStorage.getItem("user-date")) ? setReminderVisible(reminderVisible = false) : setReminderVisible(reminderVisible = true) ;
+    // },([reminderVisible]));
+    function MsgRender(){
+      firebase.auth().signOut()
+      setReminderVisible(reminderVisible = false)
+    }
+
+
+    function Header(){
+      return (
+        <div className = "header"> 
+          <h3>Hostel Allocation</h3>
+          <p className="name">{firebase.auth().currentUser.displayName}</p>
+          <a onClick={MsgRender}>Sign-out</a>
+      </div>
+      );
+    }
+
 
     if (!isSignedIn) {
       return (
